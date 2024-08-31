@@ -1,0 +1,224 @@
+\documentclass[9pt]{article}
+
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[margin=.15in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+ 
+\setmainfont{Times New Roman}
+
+\titleformat{\section}{\Large\bf\raggedright}{}{1em}{}[{\titlerule[2pt]}]
+\titlespacing{\section}{0pt}{-3pt}{7pt}
+
+\titleformat{\subsubsection}[runin]
+{\bfseries}
+{$\bullet$ }
+{0em}
+{}[:]
+\titlespacing{\subsubsection}{0em}{0em}{0.4em}
+
+\newcommand{\job}[4]{
+    \begin{minipage}[t]{.65\textwidth}
+        \uppercase{\textbf{#1}}
+
+        \textit{#2}
+    \end{minipage}
+    \begin{minipage}[t]{.3\textwidth}
+        \raggedleft{#3}
+    \end{minipage}
+
+    \vspace{.5em}
+
+    \begin{minipage}[t]{.9\textwidth}
+    #4
+    \end{minipage}
+
+    \vspace{.5em}
+}
+
+\newcommand{\learn}[5]{
+    \begin{minipage}[t]{.2\textwidth}
+        #1
+    \end{minipage}
+    \begin{minipage}[t]{.7\textwidth}
+        {\bfseries #2}
+
+        {#3}
+
+        \textit{#4, средний балл: #5}
+    \end{minipage}
+
+    \vspace{.5em}
+}
+
+\newcommand{\project}[4]{
+    \begin{minipage}[t]{.1\textwidth}
+        #1
+    \end{minipage}
+    \begin{minipage}[t]{.87\textwidth}
+        {\bfseries #2}
+
+        \textit{#3}
+
+        \vspace{-1em}
+
+        {#4}
+    \end{minipage}
+}
+
+\newcommand{\myhref}[3][cyan]{\href{#2}{\color{#1}{#3}}}%
+\newcommand{\mailme}{
+    \myhref{mailto:hrustbas@gmail.com}{E-Mail}
+}
+\newcommand{\tg}{
+    \myhref{https://t.me/wtukatyr}{Telegram}
+}
+\newcommand{\linkedin}{
+    \myhref{https://www.linkedin.com/in/rustam-basyrov-978b78286/}{LinkedIn}
+}
+\newcommand{\github}{
+    \myhref{https://github.com/rustbas}{GitHub}
+}
+\newcommand{\phone}{
+    {\myhref{tel:+79207902655}{+7-920-790-26-55}}
+}
+
+\renewcommand{\maketitle}{
+    \begin{center}
+        {\huge\bfseries\theauthor}
+
+        \Large \mailme | \tg | \phone | \linkedin | \github
+    \end{center}
+
+    \vspace{-.9em}
+}
+
+\title{R\'esum\'e}
+\author{Басыров Рустам}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{ПРОФЕССИОНАЛЬНЫЙ ОПЫТ}
+
+\job
+    {ООО МОРОЗКО}
+    {Системный администратор}
+    {Август 2023 года --- по настоящее время}
+    {
+        \begin{itemize}
+            \setlength\itemsep{-.5em}
+            \item Поддержка и настройка контейнеров Docker (в командной строке и с помощью Portainer).
+            \item Разработка ansible-плейбука для развертывания агента Zabbix на платах Raspberry Pi и последующего мониторинга подключения ИБП к сети питания.
+            \item Установка и настройка сертификатов для работы пользователей в онлайн-сервисах.
+            \item Поддержка Zabbix — настройка дашбордов, добавление новых хостов.
+            \item Поддержка почтового сервера на базе MDaemon — управление учетными записями, устранение неполадок.
+            \item Установка и настройка АРМ.
+            \item Тех. поддержка пользователей.
+        \end{itemize}
+    }
+
+\job
+    {Институт биоинформатики}
+    {Ассистент преподавателя по курсу “Командная строка Linux”}
+    {Сентябрь 2023 года — Декабрь 2023 года}
+    {
+        \begin{itemize}
+            \setlength\itemsep{-.5em}
+            \item Актуализация курса для учёбы в MacOS.
+            \item Ответы на вопросы студентов.
+        \end{itemize}
+    }
+
+\section{НАВЫКИ}
+
+\subsubsection{Администрирование}
+дистрибутивы Linux, права доступа, управление процессами, основы docker и ansible, nginx (веб-сервер),
+сетевые протоколы.
+
+\subsubsection{Программирование}
+python (в том числе: numpy, scipy, pandas, matplotlib), bash, C/C++.
+
+\subsubsection{Общее}
+чтение документации (на русском и английском), git, терминал (vim, tmux, различные утилиты командной строки).
+
+\vspace{.5em}
+
+\section{ОБРАЗОВАНИЕ}
+
+\learn
+{2022 --- 2023}
+{Институт биоинформатики}
+{Заочная программа профессиональной переподготовки}
+{«Алгоритмическая биоинформатика»}
+{4.3/5}
+
+\learn
+{2017 — 2022}
+{Московский Авиационный Институт}
+{Специалитет}
+{«Системы управления летательных аппаратов»}
+{4.73/5}
+
+\section{ДОПОЛНИТЕЛЬНЫЕ КУРСЫ}
+
+\begin{itemize}
+    \setlength\itemsep{-.5em}
+    \item Введение в Linux (Институт биоинформатики); stepik.org.
+    \item Python. Основы и применение (Институт биоинформатики); stepik.org.
+    \item «Докер с нуля»; karpov.courses.
+    \item А также \myhref{https://drive.google.com/drive/folders/1EPNQ5b6PDVWkMzCplopYXnyJJu4l9fev?usp=drive_link}{другие}.
+\end{itemize}
+
+\section{ПРОЕКТЫ}
+
+\project
+{2022}
+{Институт Биоинформатики — научный проект}
+{Analysis of the structural diversity of β-arches (научный проект ИБ), (репозиторий/elibrary)}
+{
+    \begin{itemize}
+        \setlength\itemsep{-.5em}
+        \item Рассчитал попарные среднеквадратическые отклонения β-арок и кластеризовал их методом иерархической кластеризации.
+        \item Уменьшил количество измерений с 10 до 3 для визуализации распределения β-арок по торсионным углам методом главных компонент.
+        \item Проверил гипотезу о равенстве медиан торсионных углов у разных типов β-арок с помощью T-критерия Вилкоксона.
+    \end{itemize}
+}
+
+\project
+{2022}
+{Московский Авиационный Институт — дипломная работа}
+{Алгоритм оптимизации траектории полета при свободной маршрутизации}
+{
+    \begin{itemize}
+        \setlength\itemsep{-.5em}
+        \item Разработал алгоритм построения графа по координатам ППМ с учетом запретных зон.
+        \item Решил задачу обхода запретной зоны.
+        \item Разработал ПО для оптимизации и визуализации траектории полета при свободной и несвободной маршрутизации.
+    \end{itemize}
+}
+
+\project
+{2019}
+{Московский Авиационный Институт — научная работа}
+{“Исследование влияния погрешностей БИНС на точность адаптивного управления движением поврежденного самолета” (elibrary)}
+{
+    \begin{itemize}
+        \setlength\itemsep{-.5em}
+        \item Занимался сбором данных влияния шумов датчиков на результат моделирования системы управления.
+    \end{itemize}
+}
+
+
+\section{ОБЛАСТИ ИНТЕРЕСОВ}
+
+Люблю Linux и все, что связано с ним. Предпочитаю командную строку графическим приложениям.
+Также увлекаюсь математической статистикой и машинным обучением.
+В свободное время, если есть возможность, занимаюсь спортивным туризмом, в частности, горным. В 2019 году
+взошел на Казбек (5033 м, 2Б к.с.) и в 2021 году — на Эльбрус (5642 м, 2А к.с.).
+
+\end{document}
