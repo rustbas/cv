@@ -1,0 +1,48 @@
+\newcommand{\job}[4]{
+    \begin{minipage}[t]{.65\textwidth}
+        \uppercase{\textbf{#1}}
+
+        \textit{#2}
+    \end{minipage}
+    \begin{minipage}[t]{.3\textwidth}
+        \raggedleft{#3}
+    \end{minipage}
+
+    \vspace{.5em}
+
+    \begin{minipage}[t]{.9\textwidth}
+    #4
+    \end{minipage}
+
+    \vspace{.5em}
+}
+
+\newcommand{\learn}[5]{
+    \begin{minipage}[t]{.2\textwidth}
+        #1
+    \end{minipage}
+    \begin{minipage}[t]{.7\textwidth}
+        {\bfseries #2}
+
+        {#3}
+
+        \textit{#4, средний балл: #5}
+    \end{minipage}
+
+    \vspace{.5em}
+}
+
+\newcommand{\project}[4]{
+    \begin{minipage}[t]{.1\textwidth}
+        #1
+    \end{minipage}
+    \begin{minipage}[t]{.87\textwidth}
+        {\bfseries #2}
+
+        \textit{#3}
+
+        \vspace{-1em}
+
+        {#4}
+    \end{minipage}
+}
