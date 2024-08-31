@@ -6,5 +6,5 @@
 # Compilation
 
 ```shell
-lualatex main.tex
+lualatex cv.tex
 ```
