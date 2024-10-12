@@ -16,15 +16,33 @@
     {\myhref{tel:+79207902655}{+7-920-790-26-55}}
 }
 
-\author{Басыров Рустам}
+\author{Басыров Рустам Насибуллович}
+
 \date{\today}
 
 \renewcommand{\maketitle}{
     \begin{center}
         {\huge\bfseries\theauthor}
-
-        {\huge \mailme  | \telegram | \phone | \linkedin | \github}
     \end{center}
 
-    \vspace{-.2em}
+    \begin{minipage}{.4\textwidth}
+        \centering
+        \includegraphics[width=.85\linewidth]{avatar.png}
+    \end{minipage} \hfill
+    \begin{minipage}{.55\textwidth}
+        \begin{center}
+            {\Large 
+            \begin{itemize}
+                \setlength{\itemindent}{1in}
+                \item \mailme  
+                \item \telegram 
+                \item \phone 
+                \item \linkedin 
+                \item \github
+            \end{itemize}
+            }
+        \end{center}
+    \end{minipage}
+
+    \vspace{1em}
 }
