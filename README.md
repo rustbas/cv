@@ -1,14 +1,10 @@
 # Requirements
 
-- `lualatex`
-- `ttf-mscorefonts-installer`
+- `pdflatex`
 
 # Compilation
 
 ```shell
-lualatex cv.tex
+pdflatex cv.tex
 ```
 
-# TODO
-
-- [ ] Remove  `ttf-mscorefonts-installer`-dependency
