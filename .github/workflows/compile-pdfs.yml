@@ -18,5 +18,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: devops_ru_2pages
-          path: devops_ru_2pages.pdf
+          path: devops_ru_2pages/devops_ru_2pages.pdf
           if-no-files-found: error
