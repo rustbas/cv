@@ -1,8 +1,6 @@
 ---
 name: CI
-on:
-  - release
-  - workflow_dispatch
+on: [release, workflow_dispatch]
 jobs:
   say-hello:
     runs-on: ubuntu-latest
