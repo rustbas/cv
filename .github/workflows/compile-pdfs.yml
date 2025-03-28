@@ -1,0 +1,8 @@
+---
+name: PDF compilation
+on: workflow_dispatch
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello, world!"
