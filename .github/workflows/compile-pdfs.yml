@@ -12,7 +12,9 @@ jobs:
       - name: Getting codebase
         uses: actions/checkout@v4
       - name: Show files
-        run: find .
+        run: |
+          pwd
+          find .
       - name: Compilation
         uses: xu-cheng/latex-action@v3
         with:
