@@ -18,10 +18,8 @@ jobs:
       - name: Compilation
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: |
-            devops_ru_2pages.tex
-          working_directory: |
-            devops_ru_2pages
+          root_file: devops_ru_2pages.tex
+          working_directory: devops_ru_2pages
       - name: Uploading artifacts
         uses: actions/upload-artifact@v4
         with:
