@@ -1,0 +1,11 @@
+---
+name: ci
+on:
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+      - runs: echo hello, world!
