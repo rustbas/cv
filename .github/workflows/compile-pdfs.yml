@@ -19,3 +19,4 @@ jobs:
         with:
           name: devops_ru_2pages
           path: devops_ru_2pages.pdf
+          if-no-files-found: error
