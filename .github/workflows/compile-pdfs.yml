@@ -15,7 +15,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: |
-            devops_ru_2pages/devops_ru_2pages.tex
+            devops_ru_2pages.tex
           working_directory: |
             devops_ru_2pages
       - name: Uploading artifacts
