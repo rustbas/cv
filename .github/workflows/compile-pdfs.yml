@@ -12,13 +12,14 @@ jobs:
       - name: Compilation
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: devops_ru_2pages.tex
-          working_directory: devops_ru_2pages
+          root_file: cv.tex
+      - name: Rename result file
+        run: mv cv.pdf devops_ru_2pages.pdf
       - name: show file
-        run: find .
+        run: find *.pdf
       - name: Uploading artifacts
         uses: actions/upload-artifact@v4
         with:
           name: devops_ru_2pages
-          path: devops_ru_2pages/devops_ru_2pages.pdf
+          path: devops_ru_2pages.pdf
           if-no-files-found: error
