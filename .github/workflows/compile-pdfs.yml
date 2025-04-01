@@ -38,4 +38,5 @@ jobs:
           path: |
             devops_ru_2pages.pdf
             dataengineer_en_2pages.pdf
+          retention-days: 30
           if-no-files-found: error
