@@ -1,6 +1,8 @@
 ---
 name: PDF compilation
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+  workflow_call:
 jobs:
   devops_ru_2pages:
     runs-on: ubuntu-latest
