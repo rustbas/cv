@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   workflow_call:
 jobs:
-  devops_ru_2pages:
+  Build PDFs:
     runs-on: ubuntu-latest
     steps:
       - name: Getting DevOps CV codebase
