@@ -7,19 +7,35 @@ jobs:
   devops_ru_2pages:
     runs-on: ubuntu-latest
     steps:
-      - name: Getting codebase
+      - name: Getting DevOps CV codebase
         uses: actions/checkout@v4
+        with:
+          ref: 'devops_ru_2pages'
       - name: Compilation
         uses: xu-cheng/latex-action@v3
         with:
           root_file: cv.tex
       - name: Rename result file
         run: mv cv.pdf devops_ru_2pages.pdf
-      - name: show file
+      - name: Show file
+        run: find *.pdf
+      - name: Getting DataEngineer CV codebase
+        uses: actions/checkout@v4
+        with:
+          ref: 'dataengineer_en_2pages'
+      - name: Compilation
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv.tex
+      - name: Rename result file
+        run: mv cv.pdf dataengineer_en_2pages.pdf
+      - name: Show file
         run: find *.pdf
       - name: Uploading artifacts
         uses: actions/upload-artifact@v4
         with:
           name: devops_ru_2pages
-          path: devops_ru_2pages.pdf
+          path: |
+            devops_ru_2pages.pdf
+            dataengineer_en_2pages.pdf
           if-no-files-found: error
