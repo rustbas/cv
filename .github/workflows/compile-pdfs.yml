@@ -19,6 +19,14 @@ jobs:
         run: mv cv.pdf devops_ru_2pages.pdf
       - name: Show file
         run: find *.pdf
+      - name: Uploading artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: devops_ru_2pages
+          path: |
+            devops_ru_2pages.pdf
+          retention-days: 30
+          if-no-files-found: error
       - name: Getting DataEngineer CV codebase
         uses: actions/checkout@v4
         with:
@@ -34,9 +42,8 @@ jobs:
       - name: Uploading artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: devops_ru_2pages
+          name: dataengineer_en_2pages
           path: |
-            devops_ru_2pages.pdf
             dataengineer_en_2pages.pdf
           retention-days: 30
           if-no-files-found: error
