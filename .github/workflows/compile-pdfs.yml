@@ -7,6 +7,7 @@ jobs:
   Build_PDFs:
     runs-on: ubuntu-latest
     steps:
+      # DevOps
       - name: Getting DevOps CV codebase
         uses: actions/checkout@v4
         with:
@@ -27,6 +28,7 @@ jobs:
             devops_ru_2pages.pdf
           retention-days: 30
           if-no-files-found: error
+      # Data Engineer 
       - name: Getting DataEngineer CV codebase
         uses: actions/checkout@v4
         with:
@@ -45,5 +47,26 @@ jobs:
           name: dataengineer_en_2pages
           path: |
             dataengineer_en_2pages.pdf
+          retention-days: 30
+          if-no-files-found: error
+      # Data Analyst
+      - name: Getting Data Analyst CV codebase
+        uses: actions/checkout@v4
+        with:
+          ref: 'data-analisys-ru-2pages'
+      - name: Compilation
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv.tex
+      - name: Rename result file
+        run: mv cv.pdf data_analisys_ru_2pages.pdf
+      - name: Show file
+        run: find *.pdf
+      - name: Uploading artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: data_analisys_ru_2pages
+          path: |
+            data_analisys_ru_2pages.pdf
           retention-days: 30
           if-no-files-found: error
